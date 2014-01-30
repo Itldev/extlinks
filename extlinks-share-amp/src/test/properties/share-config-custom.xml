@@ -1,0 +1,82 @@
+<alfresco-config>
+
+   <!-- Global config section -->
+   <config replace="true">
+      <flags>
+         <!--
+            Developer debugging setting to turn on DEBUG mode for client scripts in the browser
+         -->
+         <client-debug>true</client-debug>
+
+         <!--
+            LOGGING can always be toggled at runtime when in DEBUG mode (Ctrl, Ctrl, Shift, Shift).
+            This flag automatically activates logging on page load.
+         -->
+         <client-debug-autologging>false</client-debug-autologging>
+      </flags>
+   </config>
+
+   <config evaluator="string-compare" condition="WebFramework">
+      <web-framework>
+         <!-- SpringSurf Autowire Runtime Settings -->
+         <!-- 
+              Developers can set mode to 'development' to disable; SpringSurf caches,
+              FreeMarker template caching and Rhino JavaScript compilation.
+         -->       
+         <autowire>
+            <!-- Pick the mode: "production" or "development" -->
+            <mode>development</mode>
+         </autowire>
+      </web-framework>
+   </config>
+   
+   <config evaluator="string-compare" condition="Server">
+       <server>                        
+            <scheme>http</scheme>
+            <hostname>share</hostname>
+            <port>18081</port>
+        </server>
+    </config>
+
+  <config evaluator="string-compare" condition="Remote">
+      <remote>
+         <endpoint>
+            <id>alfresco-noauth</id>
+            <name>Alfresco - unauthenticated access</name>
+            <description>Access to Alfresco Repository WebScripts that do not require authentication</description>
+            <connector-id>alfresco</connector-id>
+            <endpoint-url>http://localhost:18080/extlinks-alfresco-webapp/s</endpoint-url>
+            <identity>none</identity>
+         </endpoint>
+
+         <endpoint>
+            <id>alfresco</id>
+            <name>Alfresco - user access</name>
+            <description>Access to Alfresco Repository WebScripts that require user authentication</description>
+            <connector-id>alfresco</connector-id>
+            <endpoint-url>http://localhost:18080/extlinks-alfresco-webapp/s</endpoint-url>
+            <identity>user</identity>
+         </endpoint>
+
+         <endpoint>
+            <id>alfresco-feed</id>
+            <name>Alfresco Feed</name>
+            <description>Alfresco Feed - supports basic HTTP authentication via the EndPointProxyServlet</description>
+            <connector-id>http</connector-id>
+            <endpoint-url>http://localhost:18080/extlinks-alfresco-webapp/s</endpoint-url>
+            <basic-auth>true</basic-auth>
+            <identity>user</identity>
+         </endpoint>
+         <endpoint>
+            <id>share-services</id>
+            <name>Services share</name>
+            <description></description>
+            <connector-id>http</connector-id>
+            <endpoint-url>http://localhost:18081/share-pyramides-webapp/page</endpoint-url>
+            <basic-auth>true</basic-auth>
+            <identity>user</identity>
+         </endpoint>
+      </remote>
+   </config>
+  
+</alfresco-config>

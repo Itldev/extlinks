@@ -1,0 +1,7 @@
+<webscript>
+   <shortname>Edit ExtLinks Category</shortname>
+   <description>Edit category</description>
+   <url>/components/dashlets/extlinks/category/</url>
+   <url>/components/dashlets/extlinks/category/{category}</url>
+    <family>ExtLinks</family>
+</webscript>

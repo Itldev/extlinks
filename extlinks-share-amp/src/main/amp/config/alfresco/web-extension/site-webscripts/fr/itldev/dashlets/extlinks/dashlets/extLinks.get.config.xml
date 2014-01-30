@@ -1,0 +1,8 @@
+<config>
+    <filter-columns>
+        <filter type="onecol" label="1 colonne" />
+        <filter type="twocol" label="2 colonnes" />
+        <filter type="threecol" label="3 colonnes" />
+        <filter type="fourcol" label="4 colonnes" />
+    </filter-columns>   
+</config>

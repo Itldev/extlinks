@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Links Crud</shortname>
+    <description>CRUD Extended Links</description>
+    <family>ExtLinks</family>
+    <url>/fr/itldev/extlinks/links/{site}/{action}</url>
+    <authentication>user</authentication>
+    <format default="json">extension</format>
+</webscript>

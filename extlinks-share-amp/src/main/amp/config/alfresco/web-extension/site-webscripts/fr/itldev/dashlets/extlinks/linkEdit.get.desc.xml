@@ -1,0 +1,6 @@
+<webscript>
+    <shortname>Edit ExtLinks Link</shortname>
+    <description>Edit ExtLinks Link</description>
+    <url>/components/dashlets/extlinks/editLink/{siteId}/{linkFileName}/{category}</url>
+    <family>ExtLinks</family>
+</webscript>

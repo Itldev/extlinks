@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Sort ExtLinks</shortname>
+   <description>Sort ExtLinks</description>
+   <url>/components/dashlets/extlinks/sortlist</url>
+    <family>ExtLinks</family>
+</webscript>

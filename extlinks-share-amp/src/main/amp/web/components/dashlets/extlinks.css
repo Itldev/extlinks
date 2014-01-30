@@ -1,0 +1,41 @@
+.ext-links div.link
+{
+    float: left;
+}
+
+.ext-links div.actions
+{
+    float: right;
+}
+
+.ext-links div.detail-list-item
+{
+    height: 1em;
+}
+
+.ext-links div.actions a.details
+{
+    background-image: url(../images/link-details-16.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.dashlet .detail-list-item{
+    padding: 7px 0;
+}
+
+.dashlet .scrollableList{
+    padding: 7px;
+    overflow: hidden;
+}
+
+.ext-links div.description
+{
+    clear: left;
+}
+
+.collink{
+    display:inline-block;
+}

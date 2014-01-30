@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>Categories Crud</shortname>
+    <description>CRUD Extended Link Category</description>
+    <family>ExtLinks</family>
+    <url>/fr/itldev/extlinks/categories/{site}/{action}</url>
+    <authentication>user</authentication>
+    <format default="json">extension</format>
+</webscript>

@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Add ExtLinks Link</shortname>
+   <description>Adds Link</description>
+   <url>/components/dashlets/extlinks/addLink/{siteId}/{categoryName}</url>
+    <family>ExtLinks</family>
+</webscript>

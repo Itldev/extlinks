@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Definition of new Model -->
+<model name="itl:extlinksmodel" xmlns="http://www.alfresco.org/model/dictionary/1.0"
+       schemaLocation="http://alfresco-model-editor.googlecode.com/svn/trunk/spring-surf-alfresco-embedded/config/alfresco/model/modelSchema.xsd">
+    <!-- Optional meta-data about the model -->
+    <description>Extended Links Model</description>
+    <author>Christophe Le Roux</author>
+    <version>1.0</version>
+    <!-- Imports are required to allow references to definitions in other models
+    -->
+    
+    <imports>
+        <!-- Import Alfresco Dictionary Definitions -->
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+        <!-- Import Alfresco Content Domain Model Definitions -->
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+        <!-- Import Alfresco Links Model Definitions -->
+        <import  uri="http://www.alfresco.org/model/linksmodel/1.0" prefix="lnk"/>
+    </imports>
+    <!-- Introduction of new namespaces defined by this model -->
+    <namespaces>
+        <namespace uri="http://www.itldev.fr/model/content/1.0" prefix="itl" />
+    </namespaces>
+
+      
+    <types>
+        <type name="itl:extlinkscategory">
+            <title>Extended Links Category</title>
+            <parent>cm:folder</parent>
+            <properties>
+                <property name="itl:extlinkscatname">
+                    <type>d:text</type>
+                    <mandatory>true</mandatory>
+                    <index enabled="false"/>                    
+                </property>
+            </properties>
+        </type>        
+        
+        <type name="itl:extlinkslink">
+            <title>Extended Link</title>
+            <parent>lnk:link</parent>
+            <properties>
+                <property name="itl:extlinksnumordre">
+                    <type>d:int</type>
+                    <default>0</default>
+                </property>          
+            </properties>                        
+        </type>
+        
+    </types>
+
+</model>

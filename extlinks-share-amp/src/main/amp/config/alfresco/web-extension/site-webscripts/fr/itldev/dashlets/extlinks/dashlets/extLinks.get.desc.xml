@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Ext Links</shortname>
+   <description>Extended Links Component - used to list extended links : categorisables et sortable</description>
+   <family>site-dashlet</family>
+   <url>/components/dashlets/extLinks</url>
+</webscript>

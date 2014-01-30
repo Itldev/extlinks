@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>List ExtLinks</shortname>
+   <description>Displays AxtLinks by category</description>
+   <url>/components/dashlets/extlinks/list</url>
+    <family>Extlinks</family>
+</webscript>
