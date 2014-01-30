@@ -1,18 +1,18 @@
 <@markup id="css" >
    <#-- CSS Dependencies -->
-   <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/dashlets/extlinks.css" group="dashlets"/>
+   <@link rel="stylesheet" type="text/css" href="${url.context}/res/components/dashlets/extlinks.css"/>
 </@>
 
 <@markup id="js">
    <#-- Dépendances javaScript locales pour gérer le nb de colonnes -->        
     <@script type="text/javascript" src="${page.url.context}/res/modules/simple-dialog.js"></@script>
-    <@script type="text/javascript" src="${url.context}/res/components/dashlets/extlinks.js" group="dashlets" />    
+    <@script type="text/javascript" src="${url.context}/res/components/dashlets/extlinks.js" />    
 </@>
 
 
 
 <script type="text/javascript">//< ! [CDATA[
-  new Alfresco.dashlet.ExtLinks("${htmlid}").setOptions(
+  new Itldev.dashlet.ExtLinks("${htmlid}").setOptions(
   {
     "siteId" : "${siteId}",
     "regionId" : "${regionId}",

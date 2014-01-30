@@ -1,8 +1,29 @@
 /**
+ * Itldev root namespace.
+ * 
+ * @namespace Itldev
+ */
+// Ensure Itldev root object exists
+if (typeof Itldev == "undefined" || !Itldev)
+{
+    var Itldev = {};
+}
+
+
+/**
+ * Itldev top-level module namespace.
+ * 
+ * @namespace Itldev
+ * @class Itldev.component
+ */
+Itldev.dashlet = Itldev.dashlet || {};
+
+
+/**
  * Dashboard ExtLinks component.
  * 
- * @namespace Alfresco.dashlet
- * @class Alfresco.dashlet.ExtLinks
+ * @namespace Itldev.dashlet
+ * @class Itldev.dashlet.ExtLinks
  */
 (function()
 {
@@ -21,18 +42,18 @@
      * Dashboard ExtLinks constructor.
      * 
      * @param {String} htmlId The HTML id of the parent element
-     * @return {Alfresco.dashlet.ExtLinks} The new component instance
+     * @return {Itldev.dashlet.ExtLinks} The new component instance
      * @constructor
      */
-    Alfresco.dashlet.ExtLinks = function ExtLinks_constructor(htmlId)
+    Itldev.dashlet.ExtLinks = function ExtLinks_constructor(htmlId)
     {
-        Alfresco.dashlet.ExtLinks.superclass.constructor.call(this, "Alfresco.dashlet.ExtLinks", htmlId, ["button", "container"]);
+        Itldev.dashlet.ExtLinks.superclass.constructor.call(this, "Itldev.dashlet.ExtLinks", htmlId, ["button", "container"]);
         // Preferences service
         this.services.preferences = new Alfresco.service.Preferences();
         return this;
     };
 
-    YAHOO.extend(Alfresco.dashlet.ExtLinks, Alfresco.component.Base,
+    YAHOO.extend(Itldev.dashlet.ExtLinks, Alfresco.component.Base,
             {
                 options:
                         {
