@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.itldev</groupId>
     <artifactId>extlinks</artifactId>
-    <version>0.9-SNAPSHOT</version>
+    <version>1.0</version>
     <name>[Alfresco extLinks] Meta Project</name>
     <description>Alfresco extended links share dashlet and alfresco backend</description>
     <packaging>pom</packaging>    
@@ -13,7 +13,13 @@
         <artifactId>alfresco-sdk-parent</artifactId>
         <version>1.1.1</version>
     </parent>
-    
+    <licenses>
+        <license>
+            <name>Affero GPL3</name>
+            <url>http://www.gnu.org/licenses/agpl.html</url>
+            <comments>The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software.</comments>
+        </license>
+    </licenses>	
     <!-- 
        | SDK properties have sensible defaults in the SDK parent, but you can override the properties below to use another version. 
        | For more available properties see the alfresco-sdk-parent POM. 
@@ -54,11 +60,11 @@
     <!-- This repository is only needed to retrieve Alfresco parent POM. 
         NOTE: This can be removed when/if Alfresco will be on Maven Central 
         
-        NOTE: The repository to be used for Alfresco Enterprise artifacts is
-        https://artifacts.alfresco.com/nexus/content/groups/private/. Please check
-        with Alfresco Support to get credentials to add to your ~/.m2/settings.xml
-        if you are a Enterprise customer or Partner  
-        -->
+    NOTE: The repository to be used for Alfresco Enterprise artifacts is
+    https://artifacts.alfresco.com/nexus/content/groups/private/. Please check
+    with Alfresco Support to get credentials to add to your ~/.m2/settings.xml
+    if you are a Enterprise customer or Partner  
+    -->
     <repositories>
         <repository>
             <id>alfresco-public</id>
@@ -69,11 +75,56 @@
             <url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
         </repository>
     </repositories>
-  <modules>
-    <module>extlinks-alfresco-amp</module>
-    <module>extlinks-share-amp</module>
-    <module>alfresco</module>
-    <module>share</module>
-    <module>runner</module>
-  </modules>
+    <modules>
+        <module>extlinks-alfresco-amp</module>
+        <module>extlinks-share-amp</module>
+        <module>alfresco</module>
+        <module>share</module>
+        <module>runner</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.mycila.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+                <version>1.8.0</version>
+                <configuration>
+                    <header>etc/header.txt</header>                   
+                    <strictCheck>true</strictCheck>                        
+                    <properties>
+                        <owner>Itl Developpement</owner>
+                        <year>2013</year>
+                        <email>contact@itldev.fr</email>
+                    </properties>
+                    
+                    <headerDefinitions>
+                        <headerDefinition>etc/style.xml</headerDefinition>
+                    </headerDefinitions>
+                    <mapping>
+                        <js>JS_STYLE</js>
+                    </mapping>
+                    <excludes>
+                        <exclude>**/alfresco-global.properties</exclude>
+                        <exclude>alf_data_dev/**</exclude>                        
+                        <exclude>**/log4j.properties</exclude>
+                        <exclude>**/*-log4j.properties</exclude>
+                         <exclude>etc/**</exclude>   
+                        <exclude>GNU-AGPL-3.0.txt</exclude>                                                
+                        <exclude>README</exclude>
+                        <exclude>**/*.config.xml</exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    
+    
+  
 </project>
