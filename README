@@ -1,1 +1,8 @@
-ExtLinks
+ExtLinks is bookmarks Dashlet module for Alfresco Share. It includes both dashlet 
+frontend and Alfresco core backend webscripts.
+
+Features:
+
+- Categories
+- Sortable links
+- multicolon rendering
